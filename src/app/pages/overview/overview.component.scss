@@ -1,3 +1,7 @@
+.home__container {
+    padding: 10px 20px;
+}
+
 .home__title {
     padding: 10px;
     font-weight: bold;
@@ -31,8 +35,13 @@
 }
 
 .records__label {
-    padding: 0px 5px 0px 5px;
+    padding: 0px 0px 0px 5px;
+}
+
+.records__detail {
+    padding: 1px 7px 1px 7px;
     color: white;
-    background-color:#828485;
+    background-color:#4565cf;
     border-radius: 4px 4px 4px 4px;
+    text-decoration: none;
 }

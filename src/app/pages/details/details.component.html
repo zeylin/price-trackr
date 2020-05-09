@@ -1,0 +1,18 @@
+<div class="container" *ngIf="price">
+    <div class="title">{{ price.itemName | uppercase }}</div>
+    <div>
+        <span class="label">id: </span>{{ price.id }}
+    </div>
+    <div>
+        <span class="label">amount: </span>{{ price.amount }} ₸
+    </div>
+    <div>
+        <span class="label">date: </span>{{ price.date }}
+    </div>
+    <div>
+        <span class="label">location: </span>{{ price.locationName }}
+    </div>
+    <div>
+        <span class="label">deleted: </span>{{ price.isDeleted }}
+    </div>
+</div>

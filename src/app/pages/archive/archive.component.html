@@ -1,9 +1,16 @@
-<ul class="records">
-    <li class="records__line" *ngFor="let price of prices">
-        <span class='records__id'>{{price.id}}</span>
-        {{price.itemName}}
-        {{price.amount}} ₸
-        {{price.locationName}}
-        {{price.date}}
-    </li>
-</ul>
+<div class="container">
+
+    <p class='title'>Recently deleted</p>
+
+    <div class="records">
+        <div class="records__line" *ngFor="let price of prices">
+            <span class='records__id'>{{price.id}}</span>
+            {{price.itemName}},
+            {{price.amount}} ₸,
+            {{price.locationName}},
+            {{price.date}}
+            <a class="records__detail" routerLink='/details/{{price.id}}'>View details</a>
+        </div>
+    </div>
+    
+</div>
