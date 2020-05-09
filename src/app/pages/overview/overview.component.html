@@ -1,0 +1,15 @@
+<p class='home__title'>Overview</p>
+
+<ul class="records">
+    <li class="records__line" *ngFor="let price of prices">
+        <span class='records__id'>{{price.id}}</span>
+        <span class='records__name'>Name</span>
+        {{price.itemName}}
+        <span class='records__amount'>Amount</span>
+        {{price.amount}} ₸
+        <span class='records__label'>Location</span>
+        {{price.locationName}}
+        <span class='records__label'>Date</span>
+        {{price.date}}
+    </li>
+</ul>

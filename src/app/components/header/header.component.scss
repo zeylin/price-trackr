@@ -1,0 +1,17 @@
+nav {
+    background-color: #21bd9b;
+
+    a {
+        display: inline-block;
+        width: 200px;
+        padding: 10px;
+        border-right: 1px solid white;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+    }
+}

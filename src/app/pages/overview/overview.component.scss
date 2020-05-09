@@ -1,0 +1,38 @@
+.home__title {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.records {
+    padding: 10px;
+}
+
+.records__line {
+    padding: 5px 0px;
+}
+
+.records__id {
+    padding: 0px 10px 0px 0px;
+    font-weight: bold;
+}
+
+.records__name {
+    padding: 0px 5px 0px 5px;
+    color: white;
+    background-color:#5a718a;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.records__amount {
+    padding: 0px 5px 0px 5px;
+    color: white;
+    background-color:#3f788a;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.records__label {
+    padding: 0px 5px 0px 5px;
+    color: white;
+    background-color:#828485;
+    border-radius: 4px 4px 4px 4px;
+}

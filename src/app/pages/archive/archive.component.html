@@ -1,0 +1,9 @@
+<ul class="records">
+    <li class="records__line" *ngFor="let price of prices">
+        <span class='records__id'>{{price.id}}</span>
+        {{price.itemName}}
+        {{price.amount}} ₸
+        {{price.locationName}}
+        {{price.date}}
+    </li>
+</ul>
