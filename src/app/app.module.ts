@@ -10,6 +10,7 @@ import { AddPriceComponent } from './pages/add-price/add-price.component';
 import { DynamicsComponent } from './pages/dynamics/dynamics.component';
 import { ArchiveComponent } from './pages/archive/archive.component';
 import { ApiService } from './api/api.service';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ApiService } from './api/api.service';
     OverviewComponent,
     AddPriceComponent,
     DynamicsComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
