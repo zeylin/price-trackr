@@ -19,4 +19,13 @@ export class ArchiveComponent implements OnInit {
     })
   }
 
+  restorePrice(index: number): void {
+    const price = this.prices[index];
+
+    this.api.restorePrice(price.id)
+      .subscribe(() => {
+        this.prices = this.prices.filter((_, i) => i !== index);
+      });
+  }
+
 }

@@ -44,4 +44,12 @@ export class ApiService {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 
+  /**
+   * Restore a price back from the archive
+   * @param id ID of the item
+   */
+  restorePrice(id: number): Observable<void> {
+    return this.http.put<void>(`${this.url}/restore/${id}`, {});
+  }
+
 }

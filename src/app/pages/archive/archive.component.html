@@ -1,5 +1,12 @@
 <div class="container">
     <app-price-list 
-        title="Recently deleted" [prices]='prices'>
+        title="Recently deleted"
+        [prices]='prices'
+        [actions]='restoreActions'
+    >
     </app-price-list>
 </div>
+
+<ng-template #restoreActions let-price let-index='index'>
+    <button class="button__restore" (click)="restorePrice(index)">Restore</button>   
+</ng-template>
