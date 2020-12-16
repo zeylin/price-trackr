@@ -1,4 +1,4 @@
-<div class="container" *ngIf="price">
+<div class="container" *ngIf="price; else loading">
     <div class="title">{{ price.itemName | uppercase }}</div>
     <div>
         <span class="label">id: </span>{{ price.id }}
@@ -16,3 +16,7 @@
         <span class="label">deleted: </span>{{ price.isDeleted }}
     </div>
 </div>
+
+<ng-template #loading>
+    loading...
+</ng-template>

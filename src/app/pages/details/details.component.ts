@@ -20,6 +20,7 @@ export class DetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // this.price = this.activeRoute.snapshot.data.price;
     this.getPrice();
   }
 

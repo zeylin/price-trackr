@@ -29,10 +29,6 @@ export class HeaderComponent implements OnInit {
       route: 'archive',
       title: 'Archive'
     },
-    {
-      route: 'details/1',
-      title: 'Details'
-    }
   ]
 
   constructor() { }

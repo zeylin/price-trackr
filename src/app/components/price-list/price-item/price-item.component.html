@@ -1,0 +1,4 @@
+<span class='records__id'>{{price?.id}}</span>
+<span class="records__label">{{price?.itemName}}</span>
+<span class='records__date'>{{price?.date}}</span>
+<a class="records__detail" [routerLink]="['/details', price.id]">View details</a>

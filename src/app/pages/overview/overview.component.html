@@ -1,19 +1,5 @@
 <div class="home__container">
-
-    <p class='home__title'>Overview</p>
-
-    <div class="records">
-        <div class="records__line" *ngFor="let price of prices">
-            <span class='records__id'>{{price.id}}</span>
-            {{price.itemName}},
-            <span class='records__label'>Amount:</span>
-            {{price.amount}} ₸,
-            <span class='records__label'>Location:</span>
-            {{price.locationName}},
-            <span class='records__label'>Date:</span>
-            {{price.date}}
-            <a class="records__detail" routerLink='/details/{{price.id}}'>View details</a>
-        </div>
-    </div>
-    
+    <app-price-list 
+        title="Overview" [prices]='prices'>
+    </app-price-list>
 </div>

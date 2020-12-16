@@ -11,6 +11,8 @@ import { DynamicsComponent } from './pages/dynamics/dynamics.component';
 import { ArchiveComponent } from './pages/archive/archive.component';
 import { ApiService } from './api/api.service';
 import { DetailsComponent } from './pages/details/details.component';
+import { PriceListComponent } from './components/price-list/price-list.component';
+import { PriceItemComponent } from './components/price-list/price-item/price-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DetailsComponent } from './pages/details/details.component';
     AddPriceComponent,
     DynamicsComponent,
     ArchiveComponent,
-    DetailsComponent
+    DetailsComponent,
+    PriceListComponent,
+    PriceItemComponent
   ],
   imports: [
     BrowserModule,

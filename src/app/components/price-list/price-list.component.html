@@ -1,0 +1,6 @@
+<p class='title'>{{ title }}</p>
+
+<div class="records">
+    <app-price-item class="records__line" *ngFor="let price of prices" [price]='price'>
+    </app-price-item>
+</div>

@@ -1,8 +1,9 @@
 <nav>
     <a
-        *ngFor='let item of links' 
+        *ngFor='let item of links'
+        [routerLinkActive]="'active'"
         [routerLink]='item.route'
     >
-    {{item.title}}
+        {{item.title}}
     </a>
 </nav>

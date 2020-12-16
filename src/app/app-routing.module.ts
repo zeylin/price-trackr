@@ -5,6 +5,7 @@ import { AddPriceComponent } from './pages/add-price/add-price.component';
 import { ArchiveComponent } from './pages/archive/archive.component';
 import { DynamicsComponent } from './pages/dynamics/dynamics.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { DetailsResolver } from './pages/details/details.resolver';
 
 
 const routes: Routes = [
@@ -26,7 +27,10 @@ const routes: Routes = [
   },
   {
     path: 'details/:id',
-    component: DetailsComponent
+    component: DetailsComponent,
+    // resolve: {
+    //   price: DetailsResolver
+    // }
   },
   {
     path: '',
