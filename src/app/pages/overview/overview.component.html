@@ -1,5 +1,12 @@
 <div class="home__container">
     <app-price-list 
-        title="Overview" [prices]='prices'>
+        title="Overview" 
+        [prices]='prices'
+        [actions]='itemActions'
+    >
     </app-price-list>
 </div>
+
+<ng-template #itemActions let-price let-index='index'>
+    <button class="button_delete" (click)="deletePrice(index)">Delete</button>   
+</ng-template>

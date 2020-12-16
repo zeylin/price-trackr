@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.4.0-SNAPSHOT] - 2020-12-17
+### Added
+- Delete a price item button in Overview
+
 ## [1.3.0-SNAPSHOT] - 2020-12-16
 ### Added
 - price-list and price-item components for overview and archive

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api/api.service';
 import { Price } from 'src/app/models/price';
 
@@ -17,6 +17,15 @@ export class OverviewComponent implements OnInit {
     this.api.fetchPrices().subscribe((prices: Price[]) => {
       this.prices = prices;
     })
+  }
+
+  deletePrice(index: number): void {
+    const price = this.prices[index];
+    
+    this.api.deletePrice(price.id)
+      .subscribe(() => {
+        this.prices = this.prices.filter((_, i) => i !== index);
+      });
   }
 
 }

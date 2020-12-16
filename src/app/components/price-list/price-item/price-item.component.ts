@@ -1,3 +1,4 @@
+import { TemplateRef } from '@angular/core';
 import { Component, Input, OnInit } from '@angular/core';
 import { Price } from 'src/app/models/price';
 
@@ -8,8 +9,11 @@ import { Price } from 'src/app/models/price';
 })
 export class PriceItemComponent implements OnInit {
   @Input() price: Price;
+  @Input() actions: TemplateRef<any>;
+  @Input() index: number;
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }

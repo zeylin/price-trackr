@@ -2,3 +2,6 @@
 <span class="records__label">{{price?.itemName}}</span>
 <span class='records__date'>{{price?.date}}</span>
 <a class="records__detail" [routerLink]="['/details', price.id]">View details</a>
+
+<ng-container *ngTemplateOutlet='actions; context: { $implicit: price, index: index }'>
+</ng-container>

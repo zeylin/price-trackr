@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Price } from '../models/price';
 import { PriceDetailed } from '../models/priceDetailed';
@@ -35,6 +34,14 @@ export class ApiService {
    */
   fetchPrice(id: number): Observable<PriceDetailed> {
     return this.http.get<PriceDetailed>(`${this.url}/${id}`);
+  }
+
+  /**
+   * Delete a price by ID
+   * @param id ID of the price entry
+   */
+  deletePrice(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
   }
 
 }

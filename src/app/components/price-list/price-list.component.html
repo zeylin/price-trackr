@@ -1,6 +1,13 @@
 <p class='title'>{{ title }}</p>
 
 <div class="records">
-    <app-price-item class="records__line" *ngFor="let price of prices" [price]='price'>
+    <app-price-item 
+        class="records__line" 
+        *ngFor="let price of prices; let i = index; trackBy: trackById" 
+        [price]='price'
+        [actions]='actions'   
+        [index]='i'
+    >
+
     </app-price-item>
 </div>
