@@ -5,6 +5,8 @@
         [actions]='restoreActions'
     >
     </app-price-list>
+
+    <button class="button__clear" (click)="clearArchive()">Clear archive</button>
 </div>
 
 <ng-template #restoreActions let-price let-index='index'>
