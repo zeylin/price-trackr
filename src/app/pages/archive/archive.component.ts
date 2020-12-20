@@ -28,4 +28,14 @@ export class ArchiveComponent implements OnInit {
       });
   }
 
+  clearArchive(): void {
+    if (this.prices.length === 0) {
+      return;
+    }
+
+    this.api.clearArchive().subscribe(() => {
+      this.prices = [];
+    });
+  }
+
 }

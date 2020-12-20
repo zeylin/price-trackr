@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
 
   private url = `${environment.apiUrl}/prices`;
+  private archiveUrl = `${environment.apiUrl}/archive`;
 
   constructor(private http: HttpClient) { }
 
@@ -22,10 +23,10 @@ export class ApiService {
   }
 
   /**
-   * Fetch deleted (archived) prices.
+   * Fetch archive (i.e. deleted prices)
    */
   fetchDeleted(): Observable<Price[]> {
-    return this.http.get<Price[]>(`${this.url}/deleted`)
+    return this.http.get<Price[]>(`${this.archiveUrl}`)
   }
 
   /**
@@ -49,7 +50,14 @@ export class ApiService {
    * @param id ID of the item
    */
   restorePrice(id: number): Observable<void> {
-    return this.http.put<void>(`${this.url}/restore/${id}`, {});
+    return this.http.put<void>(`${this.archiveUrl}/restore/${id}`, {});
+  }
+
+  /**
+   * Clear the archive by deleting all archived prices.
+   */
+  clearArchive(): Observable<void> {
+    return this.http.delete<void>(`${this.archiveUrl}/all`);
   }
 
 }
